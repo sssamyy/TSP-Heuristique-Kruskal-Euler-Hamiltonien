@@ -1,0 +1,40 @@
+===========================
+ MANUEL D'UTILISATION
+===========================
+
+Ce projet génère automatiquement des graphes, leurs matrices de distances, et applique l'algorithme de Kruskal pour obtenir un arbre couvrant minimal, puis un cycle hamiltonien.
+
+1. EXÉCUTION DU PROGRAMME
+
+   - Lancez le fichier exécutable (.exe) du projet (par double-clic ou depuis le terminal).
+   - Le programme va :
+     - Générer une matrice des distances (respectant l'inégalité triangulaire),
+     - Appliquer l'algorithme de Kruskal,
+     - Construire un parcours hamiltonien,
+     - Calculer la longueur du cycle.
+
+2. FICHIERS GÉNÉRÉS AUTOMATIQUEMENT
+
+   Après chaque exécution, plusieurs fichiers sont générés **dans le dossier du projet** :
+
+   - `distances_<n>.csv` : matrice des distances du graphe.
+   - `resultats_<n>.txt` : cycle hamiltonien et sa longueur.
+   - `graphe_initial_<n>.dot` : fichier DOT du graphe initial.
+   - `arbre_kruskal_<n>.dot` : fichier DOT de l'arbre couvrant minimal.
+
+3. GÉNÉRATION DES IMAGES PNG DES GRAPHES
+
+   Pour obtenir les images PNG :
+
+   - Rendez-vous dans le dossier du projet.
+   - Double-cliquez sur le fichier `generer_graph.bat`.
+   - Ce script utilise `graphviz\bin\dot.exe` intégré dans le projet.
+     Aucun besoin d'installation manuelle de Graphviz.
+   - Les fichiers suivants seront créés :
+     - `graphe_initial_<n>.png`
+     - `arbre_kruskal_<n>.png`
+
+4. REMARQUES
+
+   - À chaque exécution, une nouvelle instance de graphe est générée aléatoirement.
+   - Tous les fichiers générés apparaîtront dans le **dossier racine du projet**.
